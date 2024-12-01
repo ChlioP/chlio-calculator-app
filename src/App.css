@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: linear-gradient(145deg, #caefd7, #f5bfd7, #abc9e9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.calculator {
+  background: linear-gradient(#9bafd9, #103783);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 550px;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+  gap: 10px;
+}
+
+.calculator-buttons button {
+  width: 100%;
+  height: 60px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.6em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.calculator-buttons button:hover {
+  background: linear-gradient(145deg, #ff2a68, #45caff);
+  transform: translateY(-2px); /* Subtler hover effect */
+}
+
+.calculator-display input {
+  width: 100%;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 20px; /* Space between input and buttons */
+}
+
+@media (max-width: 768px) {
+  .calculator {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .calculator-buttons button {
+    width: auto;
+    height: 50px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* General styles for special buttons */
+.special-button {
+  font-weight: bold;
+  color: #fff;
+  background: #ff2a68; /* Default color for special buttons */
+}
+
+/* Specific styles for Clear (C) button */
+.special-button.clear {
+  background: #e74c3c; /* Red */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Specific styles for Delete (DEL) button */
+.special-button.delete {
+  background: #f39c12; /* Orange */
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Specific styles for Equal (=) button */
+.special-button.equal {
+  grid-column: span 2; /* Make it span two rows */
+  background: #27ae60; /* Green background */
+  color: white;
+  font-weight: bold;
 }
