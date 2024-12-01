@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chlio-calculator-app/static/css/main.931f2f09.css",
+    "main.js": "/chlio-calculator-app/static/js/main.1c546bae.js",
+    "static/js/488.19419378.chunk.js": "/chlio-calculator-app/static/js/488.19419378.chunk.js",
+    "index.html": "/chlio-calculator-app/index.html",
+    "main.931f2f09.css.map": "/chlio-calculator-app/static/css/main.931f2f09.css.map",
+    "main.1c546bae.js.map": "/chlio-calculator-app/static/js/main.1c546bae.js.map",
+    "488.19419378.chunk.js.map": "/chlio-calculator-app/static/js/488.19419378.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.931f2f09.css",
+    "static/js/main.1c546bae.js"
+  ]
+}
